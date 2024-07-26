@@ -1,0 +1,79 @@
+{
+  "auth": [
+    {
+      "data": "/devices",
+      "result": {
+        "Item1": 302,
+        "Item2": "/Identity/Account/Login"
+      }
+    },
+    {
+      "data": "/devices/details/12",
+      "result": {
+        "Item1": 302,
+        "Item2": "/Identity/Account/Login"
+      }
+    }
+  ],
+  "devices": [
+    {
+      "data": {
+        "Item1": "/devices/details",
+        "Item2": 10
+      },
+      "result": {
+        "Item1": false,
+        "Item2": 302,
+        "Item3": "/Home/Error"
+      }
+    },
+    {
+      "data": {
+        "Item1": "/devices/details",
+        "Item2": 11
+      },
+      "result": {
+        "Item1": false,
+        "Item2": 302,
+        "Item3": "/Home/Error"
+      }
+    },
+    {
+      "data": {
+        "Item1": "/devices/details",
+        "Item2": 13
+      },
+      "result": {
+        "Item1": true,
+        "Item2": 200,
+        "Item3": null
+      }
+    }
+  ],
+  "delete": [
+    {
+      "data": {
+        "Item1": "/devices/delete",
+        "Item2": 12,
+        "Item3": 12
+      },
+      "result": {
+        "Item1": true,
+        "Item2": 302,
+        "Item3": "/devices"
+      }
+    },
+    {
+      "data": {
+        "Item1": "/devices/delete",
+        "Item2": 13,
+        "Item3": 11
+      },
+      "result": {
+        "Item1": false,
+        "Item2": 302,
+        "Item3": "/Home/Error"
+      }
+    }
+  ]
+}

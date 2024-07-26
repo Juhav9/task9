@@ -1,0 +1,23 @@
+﻿@model DeviceManager.Data.DeviceManagerAppUser
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h2>User Role</h2>
+<form asp-action="Update" method="post">
+	<label>
+		ID:<input value="@Model.Id" asp-for="@Model.Id" readonly />
+	</label>
+	<br />
+	<label>
+		UserId:<input value="@Model.Email" asp-for="@Model.Id" readonly />
+	</label>
+	<br />
+	<label>
+		Roles: @foreach (var item in Model.UserRoles)
+		{
+			<input value="@item.RoleId" readonly />
+		}
+	</label>
+	<br />
+	<button type="submit" value="Submit">Submit</button>
+</form>
+@{
+}

@@ -1,0 +1,39 @@
+﻿@model DeviceManager.Data.DeviceManagerAppUser
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h2>User Details</h2>
+
+<table>
+	<tr>
+		<th>user Id</th>
+		<th>email</th>
+		<th>user roles</th>
+		<th>delete</th>
+	</tr>
+	<tr>
+		<td>@Model.Id</td>
+		<td>@Model.Email</td>
+		<td>
+			@foreach(var item in Model.UserRoles)
+			{
+				@item.RoleId
+				<br />
+			}
+		</td>
+		<td>
+			<a asp-area="Administration"
+			   asp-controller="Manage"
+			   asp-action="DeleteUser"
+			   asp-route-id="@Model.Id">delete</a>
+		</td>
+		<td>
+			<a asp-area="Administration"
+			   asp-controller="Manage"
+			   asp-action="UserRoles"
+			   asp-route-id="@Model.Id">User Role</a>
+		</td>
+	</tr>
+</table>
+
+@{
+}

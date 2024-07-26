@@ -1,0 +1,102 @@
+{
+  "auth": [
+    {
+      "data": "/administration",
+      "result": {
+        "Item1": 302,
+        "Item2": "/Identity/Account/Login"
+      }
+    },
+    {
+      "data": "/administration/manage/userdetails/5",
+      "result": {
+        "Item1": 302,
+        "Item2": "/Identity/Account/Login"
+      }
+    }
+  ],
+  "users": [
+    {
+      "data": "/administration",
+      "result": {
+        "Item1": [
+          {
+            "Item1": "admin@task.org",
+            "Item2": "Admins"
+          },
+          {
+            "Item1": "user@task.org",
+            "Item2": ""
+          },
+          {
+            "Item1": "manager@task.org",
+            "Item2": "Managers"
+          },
+          {
+            "Item1": "tester@task.org",
+            "Item2": "Managers"
+          }
+        ],
+        "Item2": 5,
+        "Item3": 4
+      }
+    }
+  ],
+  "details": [
+    {
+      "data": {
+        "Item1": "/administration/manage/userdetails",
+        "Item2": "c7abb08a-70e2-4e9c-b849-871774662800"
+      },
+      "result": {
+        "Item1": "c7abb08a-70e2-4e9c-b849-871774662800",
+        "Item2": "manager@task.org",
+        "Item3": [
+          "Managers"
+        ]
+      }
+    }
+  ],
+  "delete": [
+    {
+      "data": {
+        "Item1": "/administration/manage/deleteuser",
+        "Item2": "5108957f-b520-434e-8b55-2550682e4a7c"
+      },
+      "result": {
+        "Item1": "5108957f-b520-434e-8b55-2550682e4a7c",
+        "Item2": "tester@task.org"
+      }
+    }
+  ],
+  "roles": [
+    {
+      "data": {
+        "Item1": "/administration/manage/userroles",
+        "Item2": "9909bdea-8162-41a6-aea8-ee19eedfaeb0"
+      },
+      "result": {
+        "Item1": "9909bdea-8162-41a6-aea8-ee19eedfaeb0",
+        "Item2": "user@task.org",
+        "Item3": [
+          "Managers"
+        ],
+        "Item4": null
+      }
+    },
+    {
+      "data": {
+        "Item1": "/administration/manage/userroles",
+        "Item2": "c7abb08a-70e2-4e9c-b849-871774662800"
+      },
+      "result": {
+        "Item1": "c7abb08a-70e2-4e9c-b849-871774662800",
+        "Item2": "manager@task.org",
+        "Item3": null,
+        "Item4": [
+          "Managers"
+        ]
+      }
+    }
+  ]
+}

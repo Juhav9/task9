@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Devices app</h1>
+    @if (User.Identity.IsAuthenticated)
+    {
+
+        <p>
+            Hello logged in user @User.Identity.Name!
+            <br />
+            Check your devices <a asp-action="index" asp-controller="devices">in here!</a>
+        </p>
+    }
+    else
+    {
+        <p>
+            You are not logged in. Use following accounts to login:
+            <ul>
+                <li>normal user: user@task.org / Qwerty11#</li>
+                <li>manager user: manager@task.org / Qwerty12#</li>
+                <li>admin user: admin@task.org / Qwerty13#</li>
+            </ul>
+        </p>
+    }
+</div>

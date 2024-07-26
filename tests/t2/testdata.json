@@ -1,0 +1,63 @@
+{
+  "auth": [
+    {
+      "data": "/management",
+      "result": {
+        "Item1": 302,
+        "Item2": "/Identity/Account/Login"
+      }
+    },
+    {
+      "data": "/management/userdevices?userId=5",
+      "result": {
+        "Item1": 302,
+        "Item2": "/Identity/Account/Login"
+      }
+    }
+  ],
+  "users": [
+    {
+      "data": "/management",
+      "result": {
+        "Item1": [
+          "admin@task.org",
+          "user@task.org",
+          "manager@task.org",
+          "tester@task.org"
+        ],
+        "Item2": 5,
+        "Item3": 4
+      }
+    }
+  ],
+  "devices": [
+    {
+      "data": "/management/userdevices?userId=9909bdea-8162-41a6-aea8-ee19eedfaeb0",
+      "result": {
+        "Item1": [
+          {
+            "Name": "Moped",
+            "Description": "A daily driver"
+          },
+          {
+            "Name": "Car",
+            "Description": "A luxury vehicle"
+          }
+        ],
+        "Item2": 3,
+        "Item3": 6
+      }
+    }
+  ],
+  "crud": [
+    {
+      "data": {
+        "Item1": "/management/userdevices",
+        "Item2": "9909bdea-8162-41a6-aea8-ee19eedfaeb0"
+      },
+      "result": {
+        "Item1": 3
+      }
+    }
+  ]
+}

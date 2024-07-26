@@ -1,0 +1,34 @@
+﻿@model DeviceManager.Models.DeviceViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h2>Details</h2>
+<table>
+	<tr>
+		<th>ID</th>
+		<th>UserID</th>
+		<th>Name</th>
+		<th>Description</th>
+		<th>DateAdded</th>
+		<th>Edit</th>
+		<th>Delete</th>
+	</tr>
+	<tr>
+		<td>@Model.Id</td>
+		<td>@Model.UserId</td>
+		<td>@Model.Name</td>
+		<td>@Model.Description</td>
+		<td>@Model.DateAdded</td>
+		<td>
+			<a asp-controller="Devices"
+			   asp-action="Edit"
+			   asp-route-id="@Model.Id">Edit</a>
+		</td>
+		<td>
+			<a asp-controller="Devices"
+			   asp-action="Delete"
+			   asp-route-id="@Model.Id">Delete</a>
+		</td>
+	</tr>
+</table>
+@{
+}

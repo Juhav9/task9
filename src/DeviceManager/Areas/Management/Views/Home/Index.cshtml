@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DeviceManager.Data.DeviceManagerAppUser>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<table>
+	<tr>
+		<th>
+			User ID
+		</th>
+		<th>
+			email
+		</th>
+	</tr>
+	@foreach(var item in Model)
+	{
+		<tr>
+			<td>
+				@item.Id
+			</td>
+			<td>
+				@item.Email
+			</td>
+			<td>
+				<a asp-area="Management"
+				   asp-controller="UserDevices"
+				   asp-route-userId="@item.Id"
+				>Devices</a>
+			</td>
+			
+		</tr>
+	}
+</table>
+@{
+}

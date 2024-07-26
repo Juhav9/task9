@@ -1,0 +1,48 @@
+{
+  "auth": [
+    {
+      "data": "/devices",
+      "result": {
+        "Item1": 302,
+        "Item2": "/Identity/Account/Login"
+      }
+    },
+    {
+      "data": "/devices/details/5",
+      "result": {
+        "Item1": 302,
+        "Item2": "/Identity/Account/Login"
+      }
+    }
+  ],
+  "devices": [
+    {
+      "data": "/devices",
+      "result": {
+        "Item1": [
+          {
+            "Name": "Car",
+            "Description": "A luxury vehicle"
+          },
+          {
+            "Name": "Moped",
+            "Description": "A daily driver"
+          }
+        ],
+        "Item2": 3,
+        "Item3": 6
+      }
+    }
+  ],
+  "crud": [
+    {
+      "data": {
+        "Item1": "/devices",
+        "Item2": "9909bbea-8171-41a6-aea8-ee19eedfeab0"
+      },
+      "result": {
+        "Item1": 3
+      }
+    }
+  ]
+}

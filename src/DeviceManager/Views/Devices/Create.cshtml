@@ -1,0 +1,30 @@
+﻿@model DeviceManager.Models.DeviceViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<h2>Create</h2>
+
+<form asp-action="Create" method="post">
+	<label>
+		ID:<input value="2" asp-for="Id" readonly hidden />
+	</label>
+	<br />
+	<label>
+		UserId:<input asp-for="UserId" value="default" readonly hidden />
+	</label>
+	<br />
+	<label>
+		Name:<input asp-for="Name" />
+	</label>
+	<br />
+	<label>
+		Description:<input asp-for="Description" />
+	</label>
+	<br />
+	<label>
+		DateAdded:<input asp-for="DateAdded" value="1.1.1990 0.0"  readonly hidden/>
+	</label>
+	<br />
+	<button type="submit" value="Submit">Submit</button>
+</form>
+@{
+}

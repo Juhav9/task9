@@ -1,0 +1,49 @@
+﻿@model IEnumerable<DeviceManager.Data.Device>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<table>
+	<tr>
+		<th>Id</th>
+		<th>UserId</th>
+		<th>Name</th>
+		<th>Description</th>
+		<th>DateAdded</th>
+		<th>Details</th>
+		<th>Edit</th>
+		<th>Delete</th>
+	</tr>
+@foreach(var item in Model)
+{
+	<tr>
+		<td>@item.Id</td>
+		<td>@item.UserId</td>
+		<td>@item.Name</td>
+		<td>@item.Description</td>
+		<td>@item.DateAdded</td>
+		<td> <a asp-area="Management"
+			    asp-controller="UserDevices"
+				asp-action="Details"
+				asp-route-id="@item.Id"
+				asp-route-userId="@item.UserId"
+					>Details</a>
+		</td>
+		<td>
+				<a asp-area="Management"
+				asp-controller="UserDevices"
+				asp-action="Edit"
+				asp-route-id="@item.Id"
+				asp-route-userId="@item.UserId">Edit</a>
+		</td>
+		<td>
+			<a asp-area="Management"
+			asp-controller="UserDevices"
+			asp-action="Delete"
+			asp-route-id="@item.Id"
+			asp-route-userId="@item.UserId">Delete</a>
+		</td>
+	</tr>
+}
+</table>
+<a asp-area ="Management"
+   asp-controller="UserDevices"
+   asp-action="Create"
+   asp-route-userId="@Model.First().UserId">Create</a>
